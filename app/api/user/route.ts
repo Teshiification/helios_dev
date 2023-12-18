@@ -1,7 +1,7 @@
 import { AddUser, GetUsers, UserExists } from "@/app/interfaces/user";
 
 export async function GET(req: Request) {
-  return new Response(GetUsers(), {status:200})
+  return new Response(JSON.stringify(GetUsers()), {status:200})
 }
 
 export async function POST(req: Request) {

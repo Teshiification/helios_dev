@@ -1,5 +1,3 @@
-import { Signal, signal } from "@preact/signals-react";
-
 export type User = {
     id: string;
 }
@@ -27,6 +25,10 @@ export function AddUser(id:any): boolean{
     return true;
 }
 
-export function GetUsers(): string {
-    return JSON.stringify(userlist);
+export function GetUsers(): User[] {
+    return userlist;
+}
+
+export function GetUser(id:any): User|null {
+    return userlist.find((p) => p.id === id) ||null;
 }
