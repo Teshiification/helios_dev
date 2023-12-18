@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { User } from "@/app/interfaces/user";
+import { User } from "@/app/types/user";
 
 const Userlist = () => {
   const [userlist, setUserlist] = useState<User[]>([]);
@@ -33,7 +33,7 @@ const Userlist = () => {
   }, []);
 
   return (
-    <div className="relative h-full w-full">
+    <div className="relative h-full">
       <h1 className="absolute -mt-4 ml-2 bg-slate-800 px-2">Userlist</h1>
       <div className="flex flex-wrap h-full w-full border-2 border-slate-700 p-4 rounded gap-2">
         {userlist.map((data: User, key) => (

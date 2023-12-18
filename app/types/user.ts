@@ -1,20 +1,18 @@
 export type User = {
-    id: string;
+    id: string; // something unique like mac adress
+    ip?: string;
 }
 
 const userlist:User[] = [];
 
 export function UserExists(id: any): boolean {
-  console.log(userlist);
   return userlist.some((entry) => {
-    console.log(entry.id + " is? " + id);
     return entry.id === id;
   });
 }
 
 export function AddUser(id:any): boolean{
     try{
-
         const user:User = {id:id}
         userlist.push(user);
     }

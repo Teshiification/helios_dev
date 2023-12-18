@@ -1,4 +1,4 @@
-import { AddUser, GetUsers, UserExists } from "@/app/interfaces/user";
+import { AddUser, GetUsers, UserExists } from "@/app/types/user";
 
 export async function GET(req: Request) {
   return new Response(JSON.stringify(GetUsers()), {status:200})

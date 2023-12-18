@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { GetUser, User } from '@/app/interfaces/user'
+import { GetUser, User } from '@/app/types/user'
 
 export default function personHandler(
   req: NextApiRequest,
